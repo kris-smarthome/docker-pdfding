@@ -1,7 +1,7 @@
 
 services:
   pdfding:
-    container_name: pdfding
+    container_name: "pdfding"
     image: mrmn/pdfding:latest
     restart: unless-stopped
     security-opt:
@@ -35,6 +35,7 @@ services:
 
   postgres:
     image: postgres:15
+    container_name: "postgres_pdfding"
     volumes:
       - postgres:/var/lib/postgresql/data/
     environment:
