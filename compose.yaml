@@ -4,8 +4,8 @@ services:
     container_name: "pdfding"
     image: mrmn/pdfding:latest
     restart: unless-stopped
-    security-opt:
-      - no-new-privileges:true
+    security_opt:       
+      - no-new-privileges:true 
     volumes:
       - ${MEDIA_VOLUME}:/home/nonroot/pdfding/media
     environment:
